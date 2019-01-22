@@ -1,0 +1,174 @@
+{% extends 'siklinik/view_base.html' %}
+{% block content %}
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Daftar Kunjungan
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="#">Registrasi</a></li>
+        <li><a href="../pemeriksaan/list.html">Daftar Kunjungan</a></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <a href="form.html" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Registrasi</a>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#tab_1" data-toggle="tab">Daftar Kunjungan</a></li>
+                  <li><a href="#tab_2" data-toggle="tab">Daftar Batal Kunjungan</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane active" id="tab_1">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <table id="table" class="table table-bordered table-hover">
+                          <thead>
+                          <tr class="bg-primary">
+                            <th width="13%">Tanggal</th>
+                            <th width="15%">No. Registrasi / Antrian</th>
+                            <th>No. Medrec / Nama</th>
+                            <th width="15%">Kelompok Pasien</th>
+                            <th width="15%">Dokter Pemeriksa</th>
+                            <th width="15%">Action</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td>12-12-2018 12:00</td>
+                            <td><a href="#" data-toggle="tooltip" title="Edit">R1805010001 / 1</a></td>
+                            <td>170001 / Pasien A</td>
+                            <td>Umum</td>
+                            <td>Dokter A</td>
+                            <td class="text-center">
+                              <div class="btn-group">
+                                <button type="button" data-toggle="tooltip" title="Cetak" class="btn btn-info btn-sm"><i class="fa fa-print"></i></button>
+                                <button type="button" class="btn btn-info dropdown-toggle btn-sm" data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">&nbsp;</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Bukti Pendaftaran</a></li>
+                                  <li><a href="#">No. Tracer</a></li>
+                                  <li><a href="#">Kartu Pasien</a></li>
+                                  <li><a href="#">QR Code</a></li>
+                                </ul>
+                              </div>
+                              <a href="#" data-toggle="tooltip" title="Batal" class="btn btn-warning btn-sm"><i class="fa fa-times"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>12-12-2018 12:00</td>
+                            <td><a href="#" data-toggle="tooltip" title="Edit">R1805010002 / 2</a></td>
+                            <td>170012 / Pasien D</td>
+                            <td>Umum</td>
+                            <td>Dokter A</td>
+                            <td class="text-center">
+                              <div class="btn-group">
+                                <button type="button" data-toggle="tooltip" title="Cetak" class="btn btn-info btn-sm"><i class="fa fa-print"></i></button>
+                                <button type="button" class="btn btn-info dropdown-toggle btn-sm" data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">&nbsp;</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Bukti Pendaftaran</a></li>
+                                  <li><a href="#">No. Tracer</a></li>
+                                  <li><a href="#">Kartu Pasien</a></li>
+                                  <li><a href="#">QR Code</a></li>
+                                </ul>
+                              </div>
+                              <a href="#" data-toggle="tooltip" title="Batal" class="btn btn-warning btn-sm"><i class="fa fa-times"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>12-12-2018 12:00</td>
+                            <td><a href="#" data-toggle="tooltip" title="Edit">R1805010003 / 3</a></td>
+                            <td>170050 / Pasien Z</td>
+                            <td>Umum</td>
+                            <td>Dokter A</td>
+                            <td class="text-center">
+                              <div class="btn-group">
+                                <button type="button" data-toggle="tooltip" title="Cetak" class="btn btn-info btn-sm"><i class="fa fa-print"></i></button>
+                                <button type="button" class="btn btn-info dropdown-toggle btn-sm" data-toggle="dropdown">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">&nbsp;</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Bukti Pendaftaran</a></li>
+                                  <li><a href="#">No. Tracer</a></li>
+                                  <li><a href="#">Kartu Pasien</a></li>
+                                  <li><a href="#">QR Code</a></li>
+                                </ul>
+                              </div>
+                              <a href="#" data-toggle="tooltip" title="Batal" class="btn btn-warning btn-sm"><i class="fa fa-times"></i></a>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.tab-pane -->
+                  <div class="tab-pane" id="tab_2">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <table id="table-batal" class="table table-bordered table-hover">
+                          <thead>
+                          <tr class="bg-primary">
+                            <th width="13%">Tanggal</th>
+                            <th width="15%">No. Registrasi / Antrian</th>
+                            <th>No. Medrec / Nama</th>
+                            <th width="15%">Kelompok Pasien</th>
+                            <th width="15%">Alasan</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td>12-12-2018 12:15</td>
+                            <td>R1805010004 / 4</td>
+                            <td>170101 / Pasien B</td>
+                            <td>Umum</td>
+                            <td>Karena tidak membawa dompet</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+{% endblock %}

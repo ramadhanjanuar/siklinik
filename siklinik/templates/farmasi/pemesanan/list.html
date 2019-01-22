@@ -1,0 +1,95 @@
+{% extends 'siklinik/view_base.html' %}
+{% block content %}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Pemesanan
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="#">Farmasi</a></li>
+        <li><a href="{% url 'farmasipemesanan' %}">Pemesanan</a></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <a href="{% url 'farmasipemesanan' %}" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Pemesanan</a>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <table id="table" class="table table-bordered table-hover">
+                    <thead>
+                    <tr class="bg-primary">
+                      <th width="13%">Tanggal</th>
+                      <th width="15%">No. PO</th>
+                      <th>Vendor</th>
+                      <th width="10%">Status</th>
+                      <th width="8%">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>12-12-2018 12:03</td>
+                      <td><a data-toggle="tooltip" title="Detail Pemesanan" href="#">PO1804001</a></td>
+                      <td>Vendor A</td>
+                      <td>Berhasil</td>
+                      <td class="text-center">
+                        <a data-toggle="tooltip" title="Edit" href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                        <a data-toggle="tooltip" title="Batal" href="#" class="btn btn-warning btn-sm"><i class="fa fa-times"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>12-12-2018 16:03</td>
+                      <td><a data-toggle="tooltip" title="Detail Pemesanan" href="#">PO1804002</a></td>
+                      <td>Vendor A</td>
+                      <td class="bg-warning">
+                        Batal<br/>
+                        <span class="text-info text-sm">Alasan: Tidak jadi memesan</span>
+                      </td>
+                      <td class="text-center">-</td>
+                    </tr>
+                    <tr>
+                      <td>12-12-2018 16:05</td>
+                      <td><a data-toggle="tooltip" title="Detail Pemesanan" href="#">PO1804003</a></td>
+                      <td>Vendor B</td>
+                      <td>Berhasil</td>
+                      <td class="text-center">
+                        <a data-toggle="tooltip" title="Edit" href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                        <a data-toggle="tooltip" title="Batal" href="#" class="btn btn-warning btn-sm"><i class="fa fa-times"></i></a>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+{% endblock %}

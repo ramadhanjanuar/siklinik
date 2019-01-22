@@ -1,0 +1,121 @@
+{% extends 'siklinik/view_base.html' %}
+{% block content %}
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Pemeriksaan
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="../pemeriksaan/list.html">Pemeriksaan</a></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              &nbsp;
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="{% url 'addpemeriksaan' %}" data-toggle="tab">Daftar Pemeriksaan</a></li>
+                  <li><a href="#tab_2" data-toggle="tab">Daftar Kunjungan</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane active" id="tab_1">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <table id="table" class="table table-bordered table-hover">
+                          <thead>
+                          <tr class="bg-primary">
+                            <th width="13%">Tanggal</th>
+                            <th width="15%">No. Registrasi / Antrian</th>
+                            <th>No. Medrec / Nama</th>
+                            <th width="15%">Kelompok Pasien</th>
+                            <th width="15%">Dokter Pemeriksa</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td><a data-toggle="tooltip" title="Pemeriksaan" href="form-create.html">12-12-2018 12:03</a></td>
+                            <td>R1805010002 / 2</td>
+                            <td>170012 / Pasien D</td>
+                            <td>Umum</td>
+                            <td>Dokter A</td>
+                          </tr>
+                          <tr>
+                            <td><a data-toggle="tooltip" title="Pemeriksaan" href="form-create.html">12-12-2018 12:10</a></td>
+                            <td>R1805010003 / 3</td>
+                            <td>170050 / Pasien Z</td>
+                            <td>Umum</td>
+                            <td>Dokter A</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.tab-pane -->
+                  <div class="tab-pane" id="tab_2">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <table id="table-kunjungan" class="table table-bordered table-hover">
+                          <thead>
+                          <tr class="bg-primary">
+                            <th width="13%">Tanggal</th>
+                            <th width="15%">No. Registrasi / Antrian</th>
+                            <th>No. Medrec / Nama</th>
+                            <th width="15%">Kelompok Pasien</th>
+                            <th width="15%">Dokter Pemeriksa</th>
+                            <th width="10%">Action</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td>12-12-2018 12:00</td>
+                            <td>R1805010001 / 1</td>
+                            <td>170001 / Pasien A</td>
+                            <td>Umum</td>
+                            <td>Dokter A</td>
+                            <td class="text-center">
+                              <a href="#" data-toggle="tooltip" title="Edit" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.tab-content -->
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+{% endblock %}
